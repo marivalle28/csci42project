@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <!-- Home Button -->
+    <form action="{% url 'home' %}">
+        <input type="submit" value="🏠"/>
+    </form>
+
+    <center>
+        <form action="{% url 'home' %}">
+            <label for="fname">Type Your Location</label><br>
+            <input type="text" id="location" name="location"><br>
+            <input type="submit" value="Enter">
+        </form>
+    </center>
+
+
+</body>
+</html>

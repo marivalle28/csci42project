@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div class="topnav">
+        <input type="text" placeholder="Search..">
+    </div>
+
+    <center>
+        <h1>in the mood for food?</h1>
+
+        <p>
+            Answer a few questions and we'll match your mood with the right restaurants!
+        </p>
+        <!-- Take Quiz Button -->
+        <form action="{% url 'takequiz' %}">
+            <input type="submit" value="Take Quiz" />
+        </form>
+
+        <p>
+            -----------------------------------------------------------
+        </p>
+
+        <p>
+            Find highly-rated restaurants close to you(r heart)!
+        </p>
+        <!-- Find Resto Button -->
+        <form action="{% url 'findresto' %}">
+            <input type="submit" value="Restos Near Me" />
+        </form>
+
+    </center>
+
+
+</body>
+</html>
