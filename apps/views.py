@@ -8,3 +8,6 @@ def takequiz(request):
 
 def findresto(request):
 		return render(request, "apps/findresto.html")
+
+def quizresults(request):
+		return render(request, "apps/quizresults.html")
