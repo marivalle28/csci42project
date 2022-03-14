@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <body>
+    <head>
+        <title>Take Quiz</title>
+        <div align=center>
+            <h1> QUIZ</h1>
+        <hr>
+        </div>
+    </head>
     <!-- Home Button -->
     <form action="{% url 'home' %}">
         <input type="submit" value="🏠"/>
     </form>
-
-    <center>
-        <h1>QUIZ</h1>
-    </center>
 
     <form name = "quiz" id="quiz" align="center">
         <div>
@@ -89,6 +92,8 @@
           <p><input type="radio" name="question9" value="hot day"> hot day</p>
         </div>
       </form>
-
+      <center>
+      <button type="submit">Submit</button>
+      </center
 </body>
 </html>
