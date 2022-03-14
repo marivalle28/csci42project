@@ -13,7 +13,7 @@
         <input type="submit" value="🏠"/>
     </form>
 
-    <form name = "quiz" id="quiz" align="center">
+    <form name = "quiz" id="quiz" align="center" action="{% url 'quizresults' %}">
         <div>
           <p> 1. How much is your budget?</p>
           <p><input type="radio" name="question1" value="₱"> ₱</p>
@@ -91,9 +91,10 @@
           <p><input type="radio" name="question9" value="rainy day"> rainy day</p>
           <p><input type="radio" name="question9" value="hot day"> hot day</p>
         </div>
-      </form>
-      <center>
-      <button type="submit">Submit</button>
-      </center
+        <div text-align="center">
+             <input type="submit" value="Submit Quiz"/>
+        </form>
+        </div>
+    </form>
 </body>
 </html>
