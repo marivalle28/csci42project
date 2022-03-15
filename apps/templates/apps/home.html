@@ -2,8 +2,9 @@
 <!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <html>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
     <head>
         <title>Mood for Food</title>
@@ -14,30 +15,26 @@
         </div>
     </head>
     
-    <div class="topnav" align="center">
-        <input type="text" placeholder="Search key words...">
-        <button type="submit"><i class="fa fa-search" aria-hidden"true"></i></button>
+    <div class="topnav">
+        <p> <input type="text" placeholder="Search keywords...">
+        <button type="submit"><i class="fa fa-search" aria-hidden"true"></i></button> </p>
     </div>
 
-    <hr>
-
     <center>
-        <p>
-            Answer a few questions and we'll match your mood with the right restaurants!
-        </p>
-        <!-- Take Quiz Button -->
-        <form action="{% url 'takequiz' %}">
-                <p><input type="submit" value="Take Quiz" /></p>
-        </form>
-        <hr>
-        <p>
-            Find highly-rated restaurants close to you(r heart)!
-        </p>
-        <!-- Find Resto Button -->
-        <form action="{% url 'findresto' %}">
-            <p><input type="submit" value="Restos Near Me" /></p>
-        </form>
-
+        <div class="row">
+            <div class="column">
+                <form action="{% url 'takequiz' %}">
+                    <p> <input type="submit" value="Take Quiz" /> </p>
+                </form>
+                <p> Answer a few questions and we'll match your mood with the right restaurants! </p>
+            </div>
+            <div class="column">
+                <form action="{% url 'findresto' %}">
+                    <p> <input type="submit" value="Restos Near Me" /> </p>
+                </form>
+                <p> Find highly-rated restaurants close to you(r heart)! </p>
+            </div>
+        </div>
     </center>
 
 

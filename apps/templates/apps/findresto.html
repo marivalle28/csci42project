@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet" type="text/css">
+
 <html>
 <body>
     <head>
@@ -12,15 +13,16 @@
             <h1> Type Your Location</h1>
         </div>
     </head>
-    <!-- Home Button -->
-    <form action="{% url 'home' %}">
-        <input type="submit" value="🏠"/>
-    </form>
+    <div class="topnav">
+        <form action="{% url 'home' %}">
+            <input type="submit" value="🏠"/>
+        </form>
+    </div>
 
     <center>
         <form action="{% url 'home' %}">
-            <input type="text" id="location" placeholder="Search location...">
-            <p><input type="submit" value="Enter"></p>
+            <p><input type="text" id="location" placeholder="Search location...">
+            <input type="submit" value="Enter"></p>
         </form>
     </center>
 

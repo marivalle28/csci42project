@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet" type="text/css">
+
 <html>
 <body>
     <head>
@@ -12,41 +13,42 @@
             <h1> Quiz </h1>
         </div>
     </head>
-    <!-- Home Button -->
-    <form action="{% url 'home' %}">
-        <input type="submit" value="🏠"/>
-    </form>
+    <div class="topnav">
+      <form action="{% url 'home' %}">
+          <input type="submit" value="🏠"/>
+      </form>
+    </div>
 
     <form name = "quiz" id="quiz" align="center" action="{% url 'quizresults' %}">
         <div>
-          <p> 1. How much is your budget?</p>
+          <p> 1. How much is your budget? </p>
           <p><input type="radio" name="question1" value="₱"> ₱</p>
           <p><input type="radio" name="question1" value="₱₱"> ₱₱</p>
           <p><input type="radio" name="question1" value="₱₱₱"> ₱₱₱</p>
         </div>
     
         <div>
-          <p> 2. What cuisine are you in the mood for</p>
-          <p><input type="radio" name="question2" value="American"> American</p>
-          <p><input type="radio" name="question2" value="Italian"> Italian</p>
-          <p><input type="radio" name="question2" value="Filipino"> Filipino</p>
-          <p><input type="radio" name="question2" value="Chinese"> Chinese</p>
-          <p><input type="radio" name="question2" value="Japanese"> Japanese</p>
-          <p><input type="radio" name="question2" value="Korean"> Korean</p>
-          <p><input type="radio" name="question2" value="Mexican"> Mexican</p>
+          <p> 2. What cuisine are you in the mood for? </p>
+          <p><input type="checkbox" name="question2" value="American"> American</p>
+          <p><input type="checkbox" name="question2" value="Italian"> Italian</p>
+          <p><input type="checkbox" name="question2" value="Filipino"> Filipino</p>
+          <p><input type="checkbox" name="question2" value="Chinese"> Chinese</p>
+          <p><input type="checkbox" name="question2" value="Japanese"> Japanese</p>
+          <p><input type="checkbox" name="question2" value="Korean"> Korean</p>
+          <p><input type="checkbox" name="question2" value="Mexican"> Mexican</p>
         </div>
     
         <div>
           <p> 3. Craving something? </p>
-          <p><input type="radio" name="question3" value="Sweet"> Sweet</p>
-          <p><input type="radio" name="question3" value="Salty"> Salty</p>
-          <p><input type="radio" name="question3" value="Sour"> Sour</p>
-          <p><input type="radio" name="question3" value="Spicy"> Spicy</p>
-          <p><input type="radio" name="question3" value="Umami"> Umami</p>
+          <p><input type="checkbox" name="question3" value="Sweet"> Sweet</p>
+          <p><input type="checkbox" name="question3" value="Salty"> Salty</p>
+          <p><input type="checkbox" name="question3" value="Sour"> Sour</p>
+          <p><input type="checkbox" name="question3" value="Spicy"> Spicy</p>
+          <p><input type="checkbox" name="question3" value="Umami"> Umami</p>
         </div>
     
         <div>
-          <p> 4. What time of the day are you dining?</p>
+          <p> 4. What time of the day are you dining? </p>
           <p><input type="radio" name="question4" value="Breakfast"> Breakfast</p>
           <p><input type="radio" name="question4" value="Brunch"> Brunch</p>
           <p><input type="radio" name="question4" value="Lunch"> Lunch</p>
@@ -62,38 +64,38 @@
         </div>
     
         <div>
-          <p> 6. Any type of Restaurant you’re going for?</p>
-          <p><input type="radio" name="question6" value="Fine Dining"> Fine Dining</p>
-          <p><input type="radio" name="question6" value="Fast Food"> Fast Food</p>
-          <p><input type="radio" name="question6" value="Bar"> Bar</p>
-          <p><input type="radio" name="question6" value="Casual Dining"> Casual Dining</p>
-          <p><input type="radio" name="question6" value="Cafe"> Cafe</p>
-          <p><input type="radio" name="question6" value="Dessert place"> Dessert place</p>
-          <p><input type="radio" name="question6" value="Buffet"> Buffet</p>
+          <p> 6. Any type of restaurant you are going for? </p>
+          <p><input type="checkbox" name="question6" value="Fine Dining"> Fine Dining</p>
+          <p><input type="checkbox" name="question6" value="Fast Food"> Fast Food</p>
+          <p><input type="checkbox" name="question6" value="Bar"> Bar</p>
+          <p><input type="checkbox" name="question6" value="Casual Dining"> Casual Dining</p>
+          <p><input type="checkbox" name="question6" value="Cafe"> Cafe</p>
+          <p><input type="checkbox" name="question6" value="Dessert place"> Dessert place</p>
+          <p><input type="checkbox" name="question6" value="Buffet"> Buffet</p>
         </div>
     
         <div>
-          <p> 7. Any specific diet?</p>
-          <p><input type="radio" name="question7" value="Vegetarian">Vegetarian</p>
-          <p><input type="radio" name="question7" value="Vegan">Vegan</p>
-          <p><input type="radio" name="question7" value="Pescatarian">Pescatarian</p>
-          <p><input type="radio" name="question7" value="None">None</p>
+          <p> 7. Any specific diet? </p>
+          <p><input type="checkbox" name="question7" value="Vegetarian"> Vegetarian</p>
+          <p><input type="checkbox" name="question7" value="Vegan"> Vegan</p>
+          <p><input type="checkbox" name="question7" value="Pescatarian"> Pescatarian</p>
+          <p><input type="checkbox" name="question7" value="None"> None</p>
         </div>
     
         <div>
-          <p> 8. How hungry are you?</p>
-          <p><input type="radio" name="question8" value="light meal"> light meal</p>
-          <p><input type="radio" name="question8" value="regular meal"> regular meal</p>
-          <p><input type="radio" name="question8" value="heavy meal"> heavy meal</p>
-          <p><input type="radio" name="question8" value="just a snack"> just a snack</p>
+          <p> 8. How hungry are you? </p>
+          <p><input type="radio" name="question8" value="light meal"> Light meal</p>
+          <p><input type="radio" name="question8" value="regular meal"> Regular meal</p>
+          <p><input type="radio" name="question8" value="heavy meal"> Heavy meal</p>
+          <p><input type="radio" name="question8" value="just a snack"> Just a snack</p>
         </div>
     
         <div>
-          <p> 9. What kind of day is it for you?</p>
-          <p><input type="radio" name="question9" value="healthy day"> healthy day</p>
-          <p><input type="radio" name="question9" value="cheat day"> cheat day</p>
-          <p><input type="radio" name="question9" value="rainy day"> rainy day</p>
-          <p><input type="radio" name="question9" value="hot day"> hot day</p>
+          <p> 9. What kind of day is it for you? </p>
+          <p><input type="radio" name="question9" value="healthy day"> Healthy day</p>
+          <p><input type="radio" name="question9" value="cheat day"> Cheat day</p>
+          <p><input type="radio" name="question9" value="rainy day"> Rainy day</p>
+          <p><input type="radio" name="question9" value="hot day"> Hot day</p>
         </div>
         <div text-align="center">
              <p><input type="submit" value="Submit Quiz"/></p>
