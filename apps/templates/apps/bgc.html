@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <center>
+    <head>
+        <title>Highest Rated Restos Near You</title>
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            #myInput {
+              background-image: url('/css/searchicon.png');
+              background-position: 10px 10px;
+              background-repeat: no-repeat;
+              width: 50%;
+              font-size: 16px;
+              padding: 12px 20px 12px 40px;
+              border: 1px solid #ddd;
+              margin-bottom: 12px;
+            }
+            
+            #myTable {
+              border-collapse: collapse;
+              width: 80%;
+              border: 1px solid #ddd;
+              font-size: 18px;
+            }
+            
+            #myTable th, #myTable td {
+              text-align: left;
+              padding: 12px;
+            }
+            
+            #myTable tr {
+              border-bottom: 1px solid #ddd;
+            }
+            
+            #myTable tr.header, #myTable tr:hover {
+              background-color: #f1f1f1;
+            }
+        </style>
+    </head>
+    
+
+    <body>
+        <h1>Highest Rated Restos Near You</h1>
+        <p>📍 Bonifacio Global City 📍</p>
+    </body>
+
+    <!-- Home Button -->
+    <form action="{% url 'home' %}">
+        <input type="submit" value="🏠"/>
+    </form>
+
+    <!-- Search Bar -->
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for restos..">
+
+    <!-- Resto Table -->
+    <table id="myTable">
+        <tr class="header">
+            <th style="width:20%;">Restaurant</th>
+            <th style="width:20%;">Cuisine</th>
+            <th style="width:10%;">Price Range</th>
+            <th style="width:10%;">Star Rating</th>
+        </tr>
+        <tr>
+            <td><a href="{% url 'lapicara' %}">La Picara</a></td>
+            <td>Spanish</td>
+            <td>₱₱</td>
+            <td>4.2</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'thealley' %}">The Alley</a></td>
+            <td>International</td>
+            <td>₱₱₱</td>
+            <td>3.3</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'dintaifung' %}">Din tai fung</a></td>
+            <td>Taiwanese</td>
+            <td>₱₱</td>
+            <td>4.6</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'mendokoro' %}">Mendokoro Ramenba</a></td>
+            <td>Japanese</td>
+            <td>₱₱</td>
+            <td>4.9</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'mcdo' %}">McDonald's Forbes Town Center</a></td>
+            <td>American</td>
+            <td>₱₱</td>
+            <td>3.3</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'wangfu' %}">Wangfu</a></td>
+            <td>Chinese</td>
+            <td>₱₱</td>
+            <td>4.1</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'shakeshack' %}">Shake Shack</a></td>
+            <td>American</td>
+            <td>₱₱</td>
+            <td>4.2</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'singleorigin' %}">Single Origin</a></td>
+            <td>American, European</td>
+            <td>₱₱</td>
+            <td>4.3</td>
+        </tr>
+    </table>
+
+
+
+    <script>
+        function myFunction() {
+          // Declare variables
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+        
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+    </script>
+
+</html>
