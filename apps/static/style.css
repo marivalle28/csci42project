@@ -9,6 +9,7 @@ body {
     background-image: linear-gradient(rgba(0,0,0,0.70),rgba(0,0,0,0.70)),url("https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-size: cover;
     background-position: center;
+    background-repeat: repeat-y;
 }
 
 h1 {
@@ -62,8 +63,6 @@ button[type=submit] {
     -webkit-border-radius: 5px;
     border-radius: 5px; 
 }
-
-
 
 hr {
     border-top: 3px solid white;

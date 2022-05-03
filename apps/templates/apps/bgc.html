@@ -60,7 +60,7 @@
     <p>📍 Bonifacio Global City, Taguig</p>
 
     <!-- Search Bar -->
-    <p><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..."></p>
+    <p><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search restaurant..."></p>
 
     <!-- Resto Table -->
     <table id="myTable">
@@ -101,10 +101,22 @@
         <td>4.2</td>
       </tr>
       <tr>
+        <td><a href="{% url 'starbucks' %}">Starbucks</a></td>
+        <td>International</td>
+        <td>₱₱</td>
+        <td>4.1</td>
+      </tr>
+      <tr>
         <td><a href="{% url 'wangfu' %}">Wangfu</a></td>
         <td>Chinese</td>
         <td>₱₱</td>
         <td>4.1</td>
+      </tr>
+      <tr>
+        <td><a href="{% url 'wolfgangs' %}">Wolfgang's Steakhouse</a></td>
+        <td>American</td>
+        <td>₱₱₱</td>
+        <td>3.9</td>
       </tr>
       <tr>
         <td><a href="{% url 'mcdo' %}">McDonald's</a></td>
@@ -118,22 +130,9 @@
         <td>₱₱₱</td>
         <td>3.3</td>
       </tr>
-      <tr>
-        <td><a href="{% url 'wolfgangs' %}">Wolfgang's Steakhouse</a></td>
-        <td>American</td>
-        <td>₱₱₱</td>
-        <td>3.9</td>
-      </tr>
-      <tr>
-        <td><a href="{% url 'starbucks' %}">Starbucks</a></td>
-        <td>International</td>
-        <td>₱₱</td>
-        <td>4.1</td>
-      </tr>
     </table>
     </center>
 </body>
-
 <script>
 function myFunction() {
   // Declare variables
