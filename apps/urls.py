@@ -17,5 +17,8 @@ urlpatterns = [
     path('singleorigin/', views.singleorigin, name='singleorigin'),
     path('thealley/', views.thealley, name='thealley'),
     path('wangfu/', views.wangfu, name='wangfu'),
+    path('wolfgangs/', views.wolfgangs, name='wolfgangs'),
+    path('starbucks/', views.starbucks, name='starbucks'),
+
 
 ]

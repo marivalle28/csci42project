@@ -39,3 +39,9 @@ def thealley(request):
 
 def wangfu(request):
 		return render(request, "apps/resto_wangfu.html")
+
+def wolfgangs(request):
+		return render(request, "apps/resto_wolfgangs.html")
+
+def starbucks(request):
+		return render(request, "apps/resto_starbucks.html")
