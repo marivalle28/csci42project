@@ -47,7 +47,7 @@
     }
     </style>
   
-    <h1>Highest Rated Restos Near You</h1>
+    <h1>Restos Near You</h1>
 
     <!-- Home Button -->
     <div class="topnav">
@@ -62,6 +62,12 @@
     <!-- Search Bar -->
     <p><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search restaurant..."></p>
 
+    <div class="topnav">
+      <form action="{% url 'highestratedrestos' %}">
+        <input type="submit" value="Top 5 Highest Rated Restaurants in Your Area!"/>
+      </form>
+    </div>
+
     <!-- Resto Table -->
     <table id="myTable">
       <tr class="header">
@@ -71,22 +77,28 @@
         <th style="width:10%;">Star Rating</th>
       </tr>
       <tr>
+        <td><a href="{% url 'thealley' %}">The Alley</a></td>
+        <td>International</td>
+        <td>₱₱₱</td>
+        <td>3.3</td>
+      </tr>
+      <tr>
         <td><a href="{% url 'mendokoro' %}">Mendokoro Ramenba</a></td>
         <td>Japanese</td>
         <td>₱₱</td>
         <td>4.9</td>
       </tr>
       <tr>
+        <td><a href="{% url 'starbucks' %}">Starbucks</a></td>
+        <td>International</td>
+        <td>₱₱</td>
+        <td>4.1</td>
+      </tr>
+      <tr>
         <td><a href="{% url 'dintaifung' %}">Din Tai Fung</a></td>
         <td>Taiwanese</td>
         <td>₱₱</td>
         <td>4.6</td>
-      </tr>
-      <tr>
-        <td><a href="{% url 'singleorigin' %}">Single Origin</a></td>
-        <td>American, European</td>
-        <td>₱₱</td>
-        <td>4.3</td>
       </tr>
       <tr>
         <td><a href="{% url 'lapicara' %}">La Picara</a></td>
@@ -101,12 +113,6 @@
         <td>4.2</td>
       </tr>
       <tr>
-        <td><a href="{% url 'starbucks' %}">Starbucks</a></td>
-        <td>International</td>
-        <td>₱₱</td>
-        <td>4.1</td>
-      </tr>
-      <tr>
         <td><a href="{% url 'wangfu' %}">Wangfu</a></td>
         <td>Chinese</td>
         <td>₱₱</td>
@@ -119,15 +125,15 @@
         <td>3.9</td>
       </tr>
       <tr>
+        <td><a href="{% url 'singleorigin' %}">Single Origin</a></td>
+        <td>American, European</td>
+        <td>₱₱</td>
+        <td>4.3</td>
+      </tr>
+      <tr>
         <td><a href="{% url 'mcdo' %}">McDonald's</a></td>
         <td>American</td>
         <td>₱₱</td>
-        <td>3.3</td>
-      </tr>
-      <tr>
-        <td><a href="{% url 'thealley' %}">The Alley</a></td>
-        <td>International</td>
-        <td>₱₱₱</td>
         <td>3.3</td>
       </tr>
     </table>

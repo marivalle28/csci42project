@@ -45,3 +45,6 @@ def wolfgangs(request):
 
 def starbucks(request):
 		return render(request, "apps/resto_starbucks.html")
+
+def highestratedrestos(request):
+		return render(request, "apps/highestratedrestos.html")

@@ -19,6 +19,7 @@ urlpatterns = [
     path('wangfu/', views.wangfu, name='wangfu'),
     path('wolfgangs/', views.wolfgangs, name='wolfgangs'),
     path('starbucks/', views.starbucks, name='starbucks'),
+    path('highestratedrestos/', views.highestratedrestos, name='highestratedrestos'),
 
 
 ]
