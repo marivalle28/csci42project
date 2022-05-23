@@ -13,8 +13,11 @@
     <h1>In the mood for food?</h1>
     
     <div class="topnav">
-        <p> <input type="text" placeholder="Search keywords...">
-        <button type="submit"><i class="fa fa-search" aria-hidden"true"></i></button> </p>
+        <form name="ajaxSearchFrm" action="" method="GET">
+            <input type="text" id="searchText" name="searchText" style="width:200px;">&nbsp;&nbsp;
+            <input type="button" value="Search" onClick="return EvaluateForm();" />
+            <div id="formSuggestLayer"></div>
+        </form>
     </div>
 
     <center>
@@ -34,4 +37,53 @@
         </div>
     </center>
 </body>
+<script>
+    function EvaluateForm()
+    {
+        if( document.getElementById('searchText').value == 'din tai fung' ){
+            document.ajaxSearchFrm.action = "{% url 'dintaifung' %}";
+        }
+
+        else if( document.getElementById('searchText').value == 'la picara' ){
+            document.ajaxSearchFrm.action = "{% url 'lapicara' %}";
+        }
+
+        else if( document.getElementById('searchText').value == 'mcdo' ){
+            document.ajaxSearchFrm.action = "{% url 'mcdo' %}";
+        }
+
+        else if( document.getElementById('searchText').value == 'mendokoro' ){
+            document.ajaxSearchFrm.action = "{% url 'mendokoro' %}";
+        }
+
+        else if( document.getElementById('searchText').value == 'shake shack' ){
+            document.ajaxSearchFrm.action = "{% url 'shakeshack' %}";
+        }
+        else if( document.getElementById('searchText').value == 'single origin' ){
+            document.ajaxSearchFrm.action = "{% url 'singleorigin' %}";
+        }
+
+        else if( document.getElementById('searchText').value == 'starbucks' ){
+            document.ajaxSearchFrm.action = "{% url 'starbucks' %}";
+        }
+
+        else if( document.getElementById('searchText').value == 'the alley' ){
+            document.ajaxSearchFrm.action = "{% url 'thealley' %}";
+        }
+
+        else if( document.getElementById('searchText').value == 'wangfu' ){
+            document.ajaxSearchFrm.action = "{% url 'wangfu' %}";
+        }
+        else if( document.getElementById('searchText').value == 'wolf gangs' ){
+            document.ajaxSearchFrm.action = "{% url 'wolfgangs' %}";
+        }
+
+        else if( document.getElementById('searchText').value == 'mcdo' ){
+            document.ajaxSearchFrm.action = "{% url 'mcdo' %}";
+        }
+        document.forms["ajaxSearchFrm"].submit();
+
+        return false;
+    }
+    </script>
 </html>
