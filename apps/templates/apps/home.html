@@ -81,6 +81,30 @@
         else if( document.getElementById('searchText').value == 'mcdo' ){
             document.ajaxSearchFrm.action = "{% url 'mcdo' %}";
         }
+
+        else if( document.getElementById('searchText').value == 'spanish' ){
+            document.ajaxSearchFrm.action = "{% url 'spanish' %}";
+        }
+
+        else if( document.getElementById('searchText').value == 'american' ){
+            document.ajaxSearchFrm.action = "{% url 'american' %}";
+        }
+
+        else if( document.getElementById('searchText').value == 'chinese' ){
+            document.ajaxSearchFrm.action = "{% url 'chinese' %}";
+        }
+
+        else if( document.getElementById('searchText').value == 'international' ){
+            document.ajaxSearchFrm.action = "{% url 'international' %}";
+        }
+
+        else if( document.getElementById('searchText').value == 'japanese' ){
+            document.ajaxSearchFrm.action = "{% url 'japanese' %}";
+        }
+
+        else if( document.getElementById('searchText').value == 'taiwanese' ){
+            document.ajaxSearchFrm.action = "{% url 'taiwanese' %}";
+        }
         document.forms["ajaxSearchFrm"].submit();
 
         return false;

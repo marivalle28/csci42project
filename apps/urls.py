@@ -21,5 +21,12 @@ urlpatterns = [
     path('starbucks/', views.starbucks, name='starbucks'),
     path('highestratedrestos/', views.highestratedrestos, name='highestratedrestos'),
 
+    path('spanish/', views.spanish, name='spanish'),
+    path('american/', views.american, name='american'),
+    path('chinese/', views.chinese, name='chinese'),
+    path('japanese/', views.japanese, name='japanese'),
+    path('taiwanese/', views.taiwanese, name='taiwanese'),
+    path('international/', views.international, name='international'),
+
 
 ]

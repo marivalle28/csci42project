@@ -48,3 +48,21 @@ def starbucks(request):
 
 def highestratedrestos(request):
 		return render(request, "apps/highestratedrestos.html")
+
+def spanish(request):
+		return render(request, "apps/cuisine_spanish.html")
+
+def international(request):
+		return render(request, "apps/cuisine_international.html")
+
+def japanese(request):
+		return render(request, "apps/cuisine_japanese.html")
+
+def taiwanese(request):
+		return render(request, "apps/cuisine_taiwanese.html")
+
+def chinese(request):
+		return render(request, "apps/cuisine_chinese.html")
+
+def american(request):
+		return render(request, "apps/cuisine_american.html")
