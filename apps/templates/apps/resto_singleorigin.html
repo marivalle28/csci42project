@@ -12,12 +12,23 @@
     <h1>Single Origin</h1>
 
     <div class="topnav">
-        <!-- Back Button -->
-        <form action="{% url 'bgc' %}">
-            <input type="submit" value="⇦"/>
-        </form>
+        <table>
+            <tr>
+              <th>
+                <!-- Back Button -->
+                <form action="{% url 'bgc' %}">
+                    <input type="submit" value="⇦"/>
+                </form>
+              </th>
+              <th>
+                <!-- Home Button -->
+                <form action="{% url 'home' %}">
+                    <input type="submit" value="🏠"/>        
+                </form>
+              </th>
+            </tr>
+        </table>
     </div>
-
     <center>
         <div class="row">
             <div class="column">
