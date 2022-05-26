@@ -27,6 +27,6 @@ urlpatterns = [
     path('japanese/', views.japanese, name='japanese'),
     path('taiwanese/', views.taiwanese, name='taiwanese'),
     path('international/', views.international, name='international'),
-
+    path('low_american/', views.low_american, name='low_american'),
 
 ]

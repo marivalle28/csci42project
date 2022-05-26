@@ -66,3 +66,6 @@ def chinese(request):
 
 def american(request):
 		return render(request, "apps/cuisine_american.html")
+
+def low_american(request):
+		return render(request, "apps/result_low_american.html")

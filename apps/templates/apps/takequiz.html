@@ -21,86 +21,36 @@
 
   <center>
     <div>
-      <p> 1. How much is your budget? </p>
-      <p><input type="radio" name="question1" value="₱"> ₱</p>
-      <p><input type="radio" name="question1" value="₱₱"> ₱₱</p>
-      <p><input type="radio" name="question1" value="₱₱₱"> ₱₱₱</p>
+      <p> 1. How much is your budget? (low, mid, high) </p>
     </div>
     
     <div>
-      <p> 2. What cuisine are you in the mood for? </p>
-      <p><input type="checkbox" name="question2" value="American"> American</p>
-      <p><input type="checkbox" name="question2" value="Italian"> Italian</p>
-      <p><input type="checkbox" name="question2" value="Filipino"> Filipino</p>
-      <p><input type="checkbox" name="question2" value="Chinese"> Chinese</p>
-      <p><input type="checkbox" name="question2" value="Japanese"> Japanese</p>
-      <p><input type="checkbox" name="question2" value="Korean"> Korean</p>
-      <p><input type="checkbox" name="question2" value="Mexican"> Mexican</p>
+      <p> 2. What cuisine are you in the mood for? (american, chinese, international,japanese, spanish, taiwanese) </p>
     </div>
+    <div class="topnav">
+      <form name="ajaxSearchFrm" action="" method="GET">
+          <input type="text" id="searchText" name="searchText" style="width:200px;">&nbsp;&nbsp;
+          <input type="button" value="Match My Mood" onClick="return EvaluateForm();" />
+          <div id="formSuggestLayer"></div>
+      </form>
+  </div>
     
-    <div>
-      <p> 3. Craving something? </p>
-      <p><input type="checkbox" name="question3" value="Sweet"> Sweet</p>
-      <p><input type="checkbox" name="question3" value="Salty"> Salty</p>
-      <p><input type="checkbox" name="question3" value="Sour"> Sour</p>
-      <p><input type="checkbox" name="question3" value="Spicy"> Spicy</p>
-      <p><input type="checkbox" name="question3" value="Umami"> Umami</p>
-    </div>
-    
-    <div>
-      <p> 4. What time of the day are you dining? </p>
-      <p><input type="radio" name="question4" value="Breakfast"> Breakfast</p>
-      <p><input type="radio" name="question4" value="Brunch"> Brunch</p>
-      <p><input type="radio" name="question4" value="Lunch"> Lunch</p>
-      <p><input type="radio" name="question4" value="Dinner"> Dinner</p>
-      <p><input type="radio" name="question4" value="Late-Night"> Late-Night</p>
-    </div>
-    
-    <div>
-      <p> 5. Do you prefer outdoor or indoor seating? </p>
-      <p><input type="radio" name="question5" value="Indoor"> Indoor</p>
-      <p><input type="radio" name="question5" value="Outdoor"> Outdoor</p>
-      <p><input type="radio" name="question5" value="Either"> Either</p>
-    </div>
-    
-    <div>
-      <p> 6. Any type of restaurant you are going for? </p>
-      <p><input type="checkbox" name="question6" value="Fine Dining"> Fine Dining</p>
-      <p><input type="checkbox" name="question6" value="Fast Food"> Fast Food</p>
-      <p><input type="checkbox" name="question6" value="Bar"> Bar</p>
-      <p><input type="checkbox" name="question6" value="Casual Dining"> Casual Dining</p>
-      <p><input type="checkbox" name="question6" value="Cafe"> Cafe</p>
-      <p><input type="checkbox" name="question6" value="Dessert place"> Dessert place</p>
-      <p><input type="checkbox" name="question6" value="Buffet"> Buffet</p>
-    </div>
-    
-    <div>
-      <p> 7. Any specific diet? </p>
-      <p><input type="checkbox" name="question7" value="Vegetarian"> Vegetarian</p>
-      <p><input type="checkbox" name="question7" value="Vegan"> Vegan</p>
-      <p><input type="checkbox" name="question7" value="Pescatarian"> Pescatarian</p>
-      <p><input type="checkbox" name="question7" value="None"> None</p>
-    </div>
-    
-    <div>
-      <p> 8. How hungry are you? </p>
-      <p><input type="radio" name="question8" value="light meal"> Light meal</p>
-      <p><input type="radio" name="question8" value="regular meal"> Regular meal</p>
-      <p><input type="radio" name="question8" value="heavy meal"> Heavy meal</p>
-      <p><input type="radio" name="question8" value="just a snack"> Just a snack</p>
-    </div>
-    
-    <div>
-      <p> 9. What kind of day is it for you? </p>
-      <p><input type="radio" name="question9" value="healthy day"> Healthy day</p>
-      <p><input type="radio" name="question9" value="cheat day"> Cheat day</p>
-      <p><input type="radio" name="question9" value="rainy day"> Rainy day</p>
-      <p><input type="radio" name="question9" value="hot day"> Hot day</p>
-    </div>
 
-    <form name = "quiz" id="quiz" align="center" action="{% url 'quizresults' %}">
-      <p><input type="submit" value="Submit Quiz"/></p>
-    </form>
   </center>
 </body>
+<script>
+  function EvaluateForm()
+  {
+      if( document.getElementById('searchText').value == 'low american' ){
+          document.ajaxSearchFrm.action = "{% url 'low_american' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'la picara' ){
+          document.ajaxSearchFrm.action = "{% url 'lapicara' %}";
+      }
+      document.forms["ajaxSearchFrm"].submit();
+
+      return false;
+  }
+  </script>
 </html>
