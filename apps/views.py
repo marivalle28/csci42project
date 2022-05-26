@@ -67,5 +67,35 @@ def chinese(request):
 def american(request):
 		return render(request, "apps/cuisine_american.html")
 
-def low_american(request):
-		return render(request, "apps/result_low_american.html")
+def result_mcdo(request):
+		return render(request, "apps/result_mcdo.html")
+
+def result_lapicara(request):
+		return render(request, "apps/result_lapicara.html")
+
+def result_thealley(request):
+		return render(request, "apps/result_thealley.html")
+
+def result_dintaifung(request):
+		return render(request, "apps/result_dintaifung.html")
+
+def result_mendokoro(request):
+		return render(request, "apps/result_mendokoro.html")
+
+def result_wangfu(request):
+		return render(request, "apps/result_wangfu.html")
+
+def result_shakeshack(request):
+		return render(request, "apps/result_shakeshack.html")
+
+def result_singleorigin(request):
+		return render(request, "apps/result_singleorigin.html")
+
+def result_wolfgang(request):
+		return render(request, "apps/result_wolfgang.html")
+
+def result_starbucks(request):
+		return render(request, "apps/result_starbucks.html")
+
+def result_nomatch(request):
+		return render(request, "apps/result_nomatch.html")

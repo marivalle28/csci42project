@@ -39,20 +39,14 @@
     </div>
 
     <div>
-      <p> 3. What time of day are you dining? </p> 
-      <p> Choices: breakfast | brunch | lunch | dinner | late-night </p>
-      <hr>
-    </div>
-
-    <div>
-      <p> 4. Any specific diet? </p> 
+      <p> 3. Any specific diet? </p> 
       <p> Choices: vegetarian | vegan | pescetarian | none </p>
       <hr>
     </div>
 
     <div>
-      <p> 5. What kind of meal are you looking for? </p> 
-      <p> Choices: light | regular | heavy | snack </p>
+      <p> 4. What kind of day is it for you? </p> 
+      <p> Choices: healthy day | cheat day | rainy day | hot day </p>
       <hr>
     </div>  
 
@@ -71,16 +65,72 @@
 <script>
   function EvaluateForm()
   {
-      if( document.getElementById('searchText').value == 'low american' ){
-          document.ajaxSearchFrm.action = "{% url 'low_american' %}";
+      if( document.getElementById('searchText').value == 'low american none cheat' ){
+          document.ajaxSearchFrm.action = "{% url 'result_mcdo' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'la picara' ){
-          document.ajaxSearchFrm.action = "{% url 'lapicara' %}";
+      else if( document.getElementById('searchText').value == 'mid spanish none cheat' ){
+          document.ajaxSearchFrm.action = "{% url 'result_lapicara' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'high international none cheat' ){
+          document.ajaxSearchFrm.action = "{% url 'result_thealley' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'mid taiwanese vegetarian healthy' ){
+          document.ajaxSearchFrm.action = "{% url 'result_dintaifung' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'mid taiwanese vegan healthy' ){
+          document.ajaxSearchFrm.action = "{% url 'result_dintaifung' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'mid japanese none cheat' ){
+          document.ajaxSearchFrm.action = "{% url 'result_mendokoro' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'mid japanese none rainy' ){
+          document.ajaxSearchFrm.action = "{% url 'result_mendokoro' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'mid chinese none cheat' ){
+          document.ajaxSearchFrm.action = "{% url 'result_wangfu' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'mid american vegetarian cheat' ){
+          document.ajaxSearchFrm.action = "{% url 'result_shakeshack' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'mid american none rainy' ){
+          document.ajaxSearchFrm.action = "{% url 'result_singleorigin' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'mid american none hot' ){
+          document.ajaxSearchFrm.action = "{% url 'result_singleorigin' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'mid european none rainy' ){
+          document.ajaxSearchFrm.action = "{% url 'result_singleorigin' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'mid european none hot' ){
+          document.ajaxSearchFrm.action = "{% url 'result_singleorigin' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'high american none cheat' ){
+          document.ajaxSearchFrm.action = "{% url 'result_wolfgang' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'mid international none rainy' ){
+          document.ajaxSearchFrm.action = "{% url 'result_starbucks' %}";
+      }
+
+      else if( document.getElementById('searchText').value == 'mid international none hot' ){
+          document.ajaxSearchFrm.action = "{% url 'result_starbucks' %}";
       }
 
       else{
-        document.ajaxSearchFrm.action = "{% url 'home' %}"; //create 'no match found' page
+        document.ajaxSearchFrm.action = "{% url 'result_nomatch' %}";
       }
       document.forms["ajaxSearchFrm"].submit();
 

@@ -27,6 +27,16 @@ urlpatterns = [
     path('japanese/', views.japanese, name='japanese'),
     path('taiwanese/', views.taiwanese, name='taiwanese'),
     path('international/', views.international, name='international'),
-    path('low_american/', views.low_american, name='low_american'),
 
+    path('result_mcdo/', views.result_mcdo, name='result_mcdo'),
+    path('result_lapicara/', views.result_lapicara, name='result_lapicara'),
+    path('result_thealley/', views.result_thealley, name='result_thealley'),
+    path('result_dintaifung/', views.result_dintaifung, name='result_dintaifung'),
+    path('result_mendokoro/', views.result_mendokoro, name='result_mendokoro'),
+    path('result_wangfu/', views.result_wangfu, name='result_wangfu'),
+    path('result_shakeshack/', views.result_shakeshack, name='result_shakeshack'),
+    path('result_singleorigin/', views.result_singleorigin, name='result_singleorigin'),
+    path('result_wolfgang/', views.result_wolfgang, name='result_wolfgang'),
+    path('result_starbucks/', views.result_starbucks, name='result_starbucks'),
+    path('result_nomatch/', views.result_nomatch, name='result_nomatch'),
 ]
