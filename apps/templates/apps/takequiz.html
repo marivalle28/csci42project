@@ -21,19 +21,49 @@
 
   <center>
     <div>
-      <p> 1. How much is your budget? (low, mid, high) </p>
+        <p> Type your answer to each question in the box so we can match your mood! </p>
+        <p> EX: low american breakfast none light</p>
+        <hr>
+    </div>
+
+    <div>
+      <p> 1. How much is your budget? </p>
+      <p> Choices: low | mid | high </p>
+      <hr>
     </div>
     
     <div>
-      <p> 2. What cuisine are you in the mood for? (american, chinese, international,japanese, spanish, taiwanese) </p>
+      <p> 2. What cuisine are you in the mood for? </p> 
+      <p> Choices: american | chinese | international | japanese | spanish | taiwanese </p>
+      <hr>
     </div>
+
+    <div>
+      <p> 3. What time of day are you dining? </p> 
+      <p> Choices: breakfast | brunch | lunch | dinner | late-night </p>
+      <hr>
+    </div>
+
+    <div>
+      <p> 4. Any specific diet? </p> 
+      <p> Choices: vegetarian | vegan | pescetarian | none </p>
+      <hr>
+    </div>
+
+    <div>
+      <p> 5. What kind of meal are you looking for? </p> 
+      <p> Choices: light | regular | heavy | snack </p>
+      <hr>
+    </div>  
+
+
     <div class="topnav">
       <form name="ajaxSearchFrm" action="" method="GET">
           <input type="text" id="searchText" name="searchText" style="width:200px;">&nbsp;&nbsp;
           <input type="button" value="Match My Mood" onClick="return EvaluateForm();" />
           <div id="formSuggestLayer"></div>
       </form>
-  </div>
+    </div>
     
 
   </center>
@@ -47,6 +77,10 @@
 
       else if( document.getElementById('searchText').value == 'la picara' ){
           document.ajaxSearchFrm.action = "{% url 'lapicara' %}";
+      }
+
+      else{
+        document.ajaxSearchFrm.action = "{% url 'home' %}"; //create 'no match found' page
       }
       document.forms["ajaxSearchFrm"].submit();
 
