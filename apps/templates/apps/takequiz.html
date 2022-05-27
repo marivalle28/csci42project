@@ -22,31 +22,49 @@
   <center>
     <div>
         <p> Type your answer to each question in the box so we can match your mood! </p>
-        <p> EX: low american none cheat</p>
+        <p> Example: b f d a</p>
         <hr>
     </div>
 
     <div>
-      <p> 1. How much is your budget? </p>
-      <p> Choices: low | mid | high </p>
+      <p> 1. How much is your budget? <br>
+          a) Low <br>
+          b) Mid <br>
+          c) High <br>
+      </p>
       <hr>
     </div>
     
     <div>
-      <p> 2. What cuisine are you in the mood for? </p> 
-      <p> Choices: american | chinese | international | japanese | spanish | taiwanese </p>
+      <p> 2. What cuisine are you in the mood for? <br>
+          a) American <br>
+          b) Chinese <br>
+          c) International <br>
+          d) Japanese <br>
+          e) Spanish <br>
+          f) Taiwanese <br>
+          g) European <br>
+      </p>
       <hr>
     </div>
 
     <div>
-      <p> 3. Any specific diet? </p> 
-      <p> Choices: vegetarian | vegan | pescetarian | none </p>
+      <p> 3. Any specific diet? <br>
+          a) Vegetarian <br>
+          b) Vegan <br>
+          c) Pescetarian <br>
+          d) None <br>
+      </p>
       <hr>
     </div>
 
     <div>
-      <p> 4. What kind of day is it for you? </p> 
-      <p> Choices: healthy day | cheat day | rainy day | hot day </p>
+      <p> 4. What kind of day is it for you? <br>
+          a) Healthy Day <br>
+          b) Cheat Day <br>
+          c) Rainy Day <br>
+          d) Hot Day <br>
+      </p>
       <hr>
     </div>  
 
@@ -54,7 +72,7 @@
     <div class="topnav">
       <form name="ajaxSearchFrm" action="" method="GET">
           <input type="text" id="searchText" name="searchText" style="width:200px;">&nbsp;&nbsp;
-          <input type="button" value="Match My Mood" onClick="return EvaluateForm();" />
+          <input type="submit" value="Match My Mood" onClick="return EvaluateForm();" />
           <div id="formSuggestLayer"></div>
       </form>
     </div>
@@ -65,67 +83,67 @@
 <script>
   function EvaluateForm()
   {
-      if( document.getElementById('searchText').value == 'low american none cheat' ){
+      if( document.getElementById('searchText').value == 'a a d b' ){
           document.ajaxSearchFrm.action = "{% url 'result_mcdo' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'mid spanish none cheat' ){
+      else if( document.getElementById('searchText').value == 'b e d b' ){
           document.ajaxSearchFrm.action = "{% url 'result_lapicara' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'high international none cheat' ){
+      else if( document.getElementById('searchText').value == 'c c d b' ){
           document.ajaxSearchFrm.action = "{% url 'result_thealley' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'mid taiwanese vegetarian healthy' ){
+      else if( document.getElementById('searchText').value == 'b f d a' ){
           document.ajaxSearchFrm.action = "{% url 'result_dintaifung' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'mid taiwanese vegan healthy' ){
+      else if( document.getElementById('searchText').value == 'b f b a' ){
           document.ajaxSearchFrm.action = "{% url 'result_dintaifung' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'mid japanese none cheat' ){
+      else if( document.getElementById('searchText').value == 'b d d b' ){
           document.ajaxSearchFrm.action = "{% url 'result_mendokoro' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'mid japanese none rainy' ){
+      else if( document.getElementById('searchText').value == 'b d d c' ){
           document.ajaxSearchFrm.action = "{% url 'result_mendokoro' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'mid chinese none cheat' ){
+      else if( document.getElementById('searchText').value == 'b b d b' ){
           document.ajaxSearchFrm.action = "{% url 'result_wangfu' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'mid american vegetarian cheat' ){
+      else if( document.getElementById('searchText').value == 'b a a b' ){
           document.ajaxSearchFrm.action = "{% url 'result_shakeshack' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'mid american none rainy' ){
+      else if( document.getElementById('searchText').value == 'b a d c' ){
           document.ajaxSearchFrm.action = "{% url 'result_singleorigin' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'mid american none hot' ){
+      else if( document.getElementById('searchText').value == 'b a d d' ){
           document.ajaxSearchFrm.action = "{% url 'result_singleorigin' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'mid european none rainy' ){
+      else if( document.getElementById('searchText').value == 'b g d c' ){
           document.ajaxSearchFrm.action = "{% url 'result_singleorigin' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'mid european none hot' ){
+      else if( document.getElementById('searchText').value == 'b g d d' ){
           document.ajaxSearchFrm.action = "{% url 'result_singleorigin' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'high american none cheat' ){
+      else if( document.getElementById('searchText').value == 'b a d b' ){
           document.ajaxSearchFrm.action = "{% url 'result_wolfgang' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'mid international none rainy' ){
+      else if( document.getElementById('searchText').value == 'b c none c' ){
           document.ajaxSearchFrm.action = "{% url 'result_starbucks' %}";
       }
 
-      else if( document.getElementById('searchText').value == 'mid international none hot' ){
+      else if( document.getElementById('searchText').value == 'b c none d' ){
           document.ajaxSearchFrm.action = "{% url 'result_starbucks' %}";
       }
 

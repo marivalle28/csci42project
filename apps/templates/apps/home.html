@@ -15,7 +15,7 @@
     <div class="topnav">
         <form name="ajaxSearchFrm" action="" method="GET">
             <input type="text" id="searchText" name="searchText" style="width:200px;">&nbsp;&nbsp;
-            <input type="button" value="Search" onClick="return EvaluateForm();" />
+            <input type="submit" value="Search" onClick="return EvaluateForm();" />
             <div id="formSuggestLayer"></div>
         </form>
     </div>
@@ -74,7 +74,7 @@
         else if( document.getElementById('searchText').value == 'wangfu' ){
             document.ajaxSearchFrm.action = "{% url 'wangfu' %}";
         }
-        else if( document.getElementById('searchText').value == 'wolf gangs' ){
+        else if( document.getElementById('searchText').value == 'wolfgangs' ){
             document.ajaxSearchFrm.action = "{% url 'wolfgangs' %}";
         }
 
